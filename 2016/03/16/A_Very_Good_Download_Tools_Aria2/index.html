@@ -1,0 +1,620 @@
+<!doctype html>
+
+
+
+
+<html class="theme-next pisces">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="MAC," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="1. 安装要安装Aria2其实有好几种方法，在此介绍算是最简单的一种，因为其他方法都要自行编译，比较麻烦，而这次介绍的方法只需直接使用 Homebrew 命令行安装即可，一条命令就全部自动搞掂。不过如果你从没安装过 Homebrew，那就要再折腾一下先，其实 Homebrew 是一个功能强大的软件安装包，你可以通过它安装很多流行的开源免费软件。至于如何安装 Homebrew，可以参考这里的教程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MAC下载利器—Aria2">
+<meta property="og:url" content="http://labmain.com/2016/03/16/A_Very_Good_Download_Tools_Aria2/index.html">
+<meta property="og:site_name" content="Labmen的研究所">
+<meta property="og:description" content="1. 安装要安装Aria2其实有好几种方法，在此介绍算是最简单的一种，因为其他方法都要自行编译，比较麻烦，而这次介绍的方法只需直接使用 Homebrew 命令行安装即可，一条命令就全部自动搞掂。不过如果你从没安装过 Homebrew，那就要再折腾一下先，其实 Homebrew 是一个功能强大的软件安装包，你可以通过它安装很多流行的开源免费软件。至于如何安装 Homebrew，可以参考这里的教程。">
+<meta property="og:updated_time" content="2016-03-16T09:09:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MAC下载利器—Aria2">
+<meta name="twitter:description" content="1. 安装要安装Aria2其实有好几种方法，在此介绍算是最简单的一种，因为其他方法都要自行编译，比较麻烦，而这次介绍的方法只需直接使用 Homebrew 命令行安装即可，一条命令就全部自动搞掂。不过如果你从没安装过 Homebrew，那就要再折腾一下先，其实 Homebrew 是一个功能强大的软件安装包，你可以通过它安装很多流行的开源免费软件。至于如何安装 Homebrew，可以参考这里的教程。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: false,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://labmain.com/2016/03/16/A_Very_Good_Download_Tools_Aria2/"/>
+
+
+  <title> MAC下载利器—Aria2 | Labmen的研究所 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Labmen的研究所</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">一些小文章</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                MAC下载利器—Aria2
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-16T11:37:20+08:00" content="2016-03-16">
+              2016-03-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/开发环境/" itemprop="url" rel="index">
+                    <span itemprop="name">开发环境</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><p>要安装Aria2其实有好几种方法，在此介绍算是最简单的一种，因为其他方法都要自行编译，比较麻烦，而这次介绍的方法只需直接使用 Homebrew 命令行安装即可，一条命令就全部自动搞掂。不过如果你从没安装过 Homebrew，那就要再折腾一下先，其实 Homebrew 是一个功能强大的软件安装包，你可以通过它安装很多流行的开源免费软件。至于如何安装 Homebrew，可以参考这里的教程。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">brew install aria2</div></pre></td></tr></table></figure>
+<h2 id="2-设置配置文件"><a href="#2-设置配置文件" class="headerlink" title="2. 设置配置文件"></a>2. 设置配置文件</h2><p>aria2有两种下载模式：一种是直接命令行模式下载，平时可以用用。另一种是RPC模式，在这种模式下aria2启动后会在后台安静的等待下载请求，下载完成后也仍然后安全的驻留在后台不会自动退出。本文使用RPC模式，用以下配置文件来配置此模式(此配置文件参考1),此配置文件保存在<code>~/.aria2/aria2.conf</code>，如果 没有，自行创建。<br>用文本编辑器打开(如果没有自行创建) aria2.conf，将 雪月秋水君 提供的以下配置直接拷贝进去：<br><strong>（注意修改路径名）</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">#用户名</div><div class="line">#rpc-user=user</div><div class="line">#密码</div><div class="line">#rpc-passwd=passwd</div><div class="line">#上面的认证方式不建议使用,建议使用下面的token方式</div><div class="line">#设置加密的密钥</div><div class="line">#rpc-secret=token</div><div class="line">#允许rpc</div><div class="line">enable-rpc=true</div><div class="line">#允许所有来源, web界面跨域权限需要</div><div class="line">rpc-allow-origin-all=true</div><div class="line">#允许外部访问，false的话只监听本地端口</div><div class="line">rpc-listen-all=true</div><div class="line">#RPC端口, 仅当默认端口被占用时修改</div><div class="line">#rpc-listen-port=6800</div><div class="line">#最大同时下载数(任务数), 路由建议值: 3</div><div class="line">max-concurrent-downloads=5</div><div class="line">#断点续传</div><div class="line">continue=true</div><div class="line">#同服务器连接数</div><div class="line">max-connection-per-server=5</div><div class="line">#最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要</div><div class="line">min-split-size=10M</div><div class="line">#单文件最大线程数, 路由建议值: 5</div><div class="line">split=10</div><div class="line">#下载速度限制</div><div class="line">max-overall-download-limit=0</div><div class="line">#单文件速度限制</div><div class="line">max-download-limit=0</div><div class="line">#上传速度限制</div><div class="line">max-overall-upload-limit=0</div><div class="line">#单文件速度限制</div><div class="line">max-upload-limit=0</div><div class="line">#断开速度过慢的连接</div><div class="line">#lowest-speed-limit=0</div><div class="line">#验证用，需要1.16.1之后的release版本</div><div class="line">#referer=*</div><div class="line">#文件保存路径, 默认为当前启动位置</div><div class="line">dir=/Users/xxx/Downloads</div><div class="line">#文件缓存, 使用内置的文件缓存, 如果你不相信Linux内核文件缓存和磁盘内置缓存时使用, 需要1.16及以上版本</div><div class="line">#disk-cache=0</div><div class="line">#另一种Linux文件缓存方式, 使用前确保您使用的内核支持此选项, 需要1.15及以上版本(?)</div><div class="line">#enable-mmap=true</div><div class="line">#文件预分配, 能有效降低文件碎片, 提高磁盘性能. 缺点是预分配时间较长</div><div class="line">#所需时间 none &lt; falloc ? trunc « prealloc, falloc和trunc需要文件系统和内核支持</div><div class="line">file-allocation=prealloc</div></pre></td></tr></table></figure>
+<p>默认下载路径的「/Users/xxx/Downloads」可以改为任何你想要的绝对路径。此处写为 Downloads 目录，xxx 请自行替换成你的 Mac 用户名，然后保存，退出编辑器。</p>
+<h2 id="3-下载模式一：命令操作（这里直接忽略）"><a href="#3-下载模式一：命令操作（这里直接忽略）" class="headerlink" title="3. 下载模式一：命令操作（这里直接忽略）"></a>3. 下载模式一：命令操作（这里直接忽略）</h2><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">Download from WEB:</div><div class="line">  aria2c http://example.org/mylinux.iso</div><div class="line">Download from 2 sources:</div><div class="line">  aria2c http://a/f.iso ftp://b/f.iso</div><div class="line">Download using 2 connections per host:</div><div class="line">  aria2c -x2 http://a/f.iso</div><div class="line">BitTorrent:</div><div class="line">  aria2c http://example.org/mylinux.torrent</div><div class="line">BitTorrent Magnet URI:</div><div class="line">  aria2c &apos;magnet:?xt=urn:btih:ds2io3u2oj309xd&apos;</div><div class="line">Metalink:</div><div class="line">  aria2c http://example.org/mylinux.metalink</div><div class="line">Download URIs found in text file:</div><div class="line">  aria2c -i uris.txt</div><div class="line">下载 aria2 的 service启动脚本 及加入开机自启动项</div><div class="line">  sudo cd /etc/systemd/system/</div><div class="line">  wget https://github.com/bostoneboy/raspberry_pi_stuff/raw/master/system/aria2c.service</div><div class="line">  systemctl enable aria2c.service</div><div class="line">以进程的方式启动aria2</div><div class="line">  systemctl start aria2c.service</div></pre></td></tr></table></figure>
+<p>更多官方公布的详细命令指南如下：<br>    <a href="http://aria2.sourceforge.net/manual/en/html/aria2c.html" target="_blank" rel="external">http://aria2.sourceforge.net/manual/en/html/aria2c.html</a></p>
+<h2 id="4-下载模式二：RPC-模式"><a href="#4-下载模式二：RPC-模式" class="headerlink" title="4. 下载模式二：RPC 模式"></a>4. 下载模式二：RPC 模式</h2><p>启动命令格式 ：<code>aria2c --conf-path=&lt;PATH&gt; -D</code><br>PATH必须是绝对路径，-D表示使Aria2在后台运行，即使关闭终端也不会停止运行</p>
+<p>在终端输入<code>aria2c --conf-path=&quot;/Users/用户名/.aria2/aria2.conf&quot; -D</code>，然后 aria2 就启动了，</p>
+<h2 id="5-如何进行下载操作？"><a href="#5-如何进行下载操作？" class="headerlink" title="5. 如何进行下载操作？"></a>5. 如何进行下载操作？</h2><ul>
+<li><p>这时候你要下载文件时，还必须将文件下载链接转换成  Aria2的格式，然后再用命令行进行下载，过程比较麻烦和复杂，这里就不多说了，因为我介绍的方法可让这过程非常简单。以下推荐一个非常好用的系统，其实就是一个 Html + JS 写的网站，其整合了 Aria2 的服务，做了一个漂亮的管理界面，其下载地址：</p>
+<pre><code>https://github.com/ziahamza/webui-Aria2
+</code></pre></li>
+<li><p>下载后也不需创建任何 web 服务器，只需直接双击运行 index.html 方便即可，当然前提是你已启动了 Aria2 服务（运行上面的命令行），你可以直接在 webui-aria2 里面进行添加下载链接，然后就可以看到下载的状态速度和时间了。</p>
+</li>
+</ul>
+<h2 id="6-百度网盘下载"><a href="#6-百度网盘下载" class="headerlink" title="6. 百度网盘下载"></a>6. 百度网盘下载</h2><ul>
+<li><p>需要下载一个chrome插件：</p>
+<p>  <a href="https://chrome.google.com/webstore/detail/baiduexporter/mjaenbjdjmgolhoafkohbhhbaiedbkno" target="_blank" rel="external">https://chrome.google.com/webstore/detail/baiduexporter/mjaenbjdjmgolhoafkohbhhbaiedbkno</a></p>
+</li>
+<li><p>使用方法：打开一个百度网盘 下载地址，导出配置——ara2 RPC，就会自动下载</p>
+</li>
+</ul>
+<h2 id="7-设置开机自启动-Aria2"><a href="#7-设置开机自启动-Aria2" class="headerlink" title="7. 设置开机自启动 Aria2"></a>7. 设置开机自启动 Aria2</h2><p>点击 Mac 左上角的苹果 logo，进入系统偏好设置。点击左下倒数第二个的「用户与群组」，再点击上面的「登录项」。此时，在终端输入：<code>open /usr/local/aria2/bin/</code>会弹出一个窗口，将里面的aria2c 文件拖入到刚刚的「登录项」窗口内，将它打勾。OK，这样就能正常的开机启动啦。</p>
+<p>如果你想关掉后台的 aria2，可以到活动监视器中找到 aria2c 杀掉，也可以在终端输入<code>kill aria2</code>之后按 Tab 键，aria2 会自动变成进程号，回车即可杀掉它。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MAC/" rel="tag">#MAC</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/16/Homebrew_Install_And_Use/" rel="next" title="Homebrew的安装和使用">
+                <i class="fa fa-chevron-left"></i> Homebrew的安装和使用
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/22/HTTP_Message/" rel="prev" title="HTTP 报文">
+                HTTP 报文 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://img.labmain.com/2016-10-28-default_avatar.jpg"
+               alt="Labmen001" />
+          <p class="site-author-name" itemprop="name">Labmen001</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装"><span class="nav-number">1.</span> <span class="nav-text">1. 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-设置配置文件"><span class="nav-number">2.</span> <span class="nav-text">2. 设置配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-下载模式一：命令操作（这里直接忽略）"><span class="nav-number">3.</span> <span class="nav-text">3. 下载模式一：命令操作（这里直接忽略）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-下载模式二：RPC-模式"><span class="nav-number">4.</span> <span class="nav-text">4. 下载模式二：RPC 模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-如何进行下载操作？"><span class="nav-number">5.</span> <span class="nav-text">5. 如何进行下载操作？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-百度网盘下载"><span class="nav-number">6.</span> <span class="nav-text">6. 百度网盘下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-设置开机自启动-Aria2"><span class="nav-number">7.</span> <span class="nav-text">7. 设置开机自启动 Aria2</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Labmen001</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
