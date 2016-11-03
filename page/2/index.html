@@ -66,7 +66,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="MAC," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -82,19 +82,12 @@
 
 
 
-<meta name="description" content="0.介绍mac系统也是基于unix的系统，所以也继承类很多unix的特性，包括软件的编译，安装等。ubuntu下有快捷命令apt-get install来快速安装软件。centos下有yum install来快速安装。所以，mac下也有一种方式，就是使用brew。
-brew是Mac下的一个包管理工具，它从下载源码解压然后 ./configure &amp;amp;&amp;amp; make install ，同">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Homebrew的安装和使用">
-<meta property="og:url" content="http://labmain.com/2016/03/16/Homebrew_Install_And_Use/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Labmen的研究所">
+<meta property="og:url" content="http://labmain.com/page/2/index.html">
 <meta property="og:site_name" content="Labmen的研究所">
-<meta property="og:description" content="0.介绍mac系统也是基于unix的系统，所以也继承类很多unix的特性，包括软件的编译，安装等。ubuntu下有快捷命令apt-get install来快速安装软件。centos下有yum install来快速安装。所以，mac下也有一种方式，就是使用brew。
-brew是Mac下的一个包管理工具，它从下载源码解压然后 ./configure &amp;amp;&amp;amp; make install ，同">
-<meta property="og:updated_time" content="2016-03-16T09:10:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Homebrew的安装和使用">
-<meta name="twitter:description" content="0.介绍mac系统也是基于unix的系统，所以也继承类很多unix的特性，包括软件的编译，安装等。ubuntu下有快捷命令apt-get install来快速安装软件。centos下有yum install来快速安装。所以，mac下也有一种方式，就是使用brew。
-brew是Mac下的一个包管理工具，它从下载源码解压然后 ./configure &amp;amp;&amp;amp; make install ，同">
+<meta name="twitter:title" content="Labmen的研究所">
 
 
 
@@ -115,10 +108,10 @@ brew是Mac下的一个包管理工具，它从下载源码解压然后 ./configu
 
 
 
-  <link rel="canonical" href="http://labmain.com/2016/03/16/Homebrew_Install_And_Use/"/>
+  <link rel="canonical" href="http://labmain.com/page/2/"/>
 
 
-  <title> Homebrew的安装和使用 | Labmen的研究所 </title>
+  <title> Labmen的研究所 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -139,7 +132,9 @@ brew是Mac下的一个包管理工具，它从下载源码解压然后 ./configu
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -218,9 +213,9 @@ brew是Mac下的一个包管理工具，它从下载源码解压然后 ./configu
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
   
@@ -240,7 +235,10 @@ brew是Mac下的一个包管理工具，它从下载源码解压然后 ./configu
             
             
               
-                Homebrew的安装和使用
+                
+                <a class="post-title-link" href="/2016/03/16/Homebrew_Install_And_Use/" itemprop="url">
+                  Homebrew的安装和使用
+                </a>
               
             
           </h1>
@@ -299,7 +297,9 @@ brew是Mac下的一个包管理工具，它从下载源码解压然后 ./configu
       
 
       
-        <h2 id="0-介绍"><a href="#0-介绍" class="headerlink" title="0.介绍"></a>0.介绍</h2><p>mac系统也是基于unix的系统，所以也继承类很多unix的特性，包括软件的编译，安装等。ubuntu下有快捷命令apt-get install来快速安装软件。centos下有yum install来快速安装。所以，mac下也有一种方式，就是使用brew。</p>
+        
+          
+            <h2 id="0-介绍"><a href="#0-介绍" class="headerlink" title="0.介绍"></a>0.介绍</h2><p>mac系统也是基于unix的系统，所以也继承类很多unix的特性，包括软件的编译，安装等。ubuntu下有快捷命令apt-get install来快速安装软件。centos下有yum install来快速安装。所以，mac下也有一种方式，就是使用brew。</p>
 <p>brew是Mac下的一个包管理工具，它从下载源码解压然后 <code>./configure &amp;&amp; make install</code> ，同时会包含相关依存库。并自动配置好各种环境变量，而且非常易于卸载。 这个对程序员来说简直是福音，简单的指令，就能快速安装和升级本地的各种开发环境。</p>
 <p>home brew 官网是 <a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">http://brew.sh/index_zh-cn.html</a></p>
 <h2 id="1-安装brew"><a href="#1-安装brew" class="headerlink" title="1. 安装brew"></a>1. 安装brew</h2><p>打开 itrem 。输入一条命令即可安装好 brew。</p>
@@ -340,59 +340,40 @@ brew是Mac下的一个包管理工具，它从下载源码解压然后 ./configu
 <p>软件同样也会安装到<code>/opt/homebrew-cask/Caskroom</code>目录下。</p>
 <p>整理自（原文）: <a href="https://www.zybuluo.com/phper/note/87055" target="_blank" rel="external">https://www.zybuluo.com/phper/note/87055</a></p>
 
+          
+        
       
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
-      
-        
-
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/MAC/" rel="tag">#MAC</a>
-          
-        </div>
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/16/A_Very_Good_Download_Tools_Aria2/" rel="prev" title="MAC下载利器—Aria2">
-                MAC下载利器—Aria2 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -400,10 +381,6 @@ brew是Mac下的一个包管理工具，它从下载源码解压然后 ./configu
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -423,17 +400,8 @@ brew是Mac下的一个包管理工具，它从下载源码解压然后 ./configu
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://img.labmain.com/2016-10-28-default_avatar.jpg"
@@ -483,17 +451,6 @@ brew是Mac下的一个包管理工具，它从下载源码解压然后 ./configu
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-介绍"><span class="nav-number">1.</span> <span class="nav-text">0.介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-安装brew"><span class="nav-number">2.</span> <span class="nav-text">1. 安装brew</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-brew命令使用"><span class="nav-number">3.</span> <span class="nav-text">2.brew命令使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#用-brew-安装源码"><span class="nav-number">3.0.1.</span> <span class="nav-text">用 brew 安装源码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#brew-的常用命令"><span class="nav-number">3.0.2.</span> <span class="nav-text">brew 的常用命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-brew-cask"><span class="nav-number">4.</span> <span class="nav-text">3.brew cask</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#brew-cask-的安装"><span class="nav-number">4.1.</span> <span class="nav-text">brew cask 的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#brew-cask-常用命令"><span class="nav-number">4.2.</span> <span class="nav-text">brew cask 常用命令</span></a></li></ol></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -597,10 +554,6 @@ brew是Mac下的一个包管理工具，它从下载源码解压然后 ./configu
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
-
-
 
   
 
