@@ -66,7 +66,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Shadowdsocks," />
 
 
 
@@ -100,10 +100,10 @@
 你可以尝试打开一下网站：  Google、FaceBook、Youtube、Wikipedia、Twitter、Dropbox
 
 查看一些国外的技术网站：stackoverf">
-<meta property="og:image" content="http://7xpp6e.com1.z0.glb.clouddn.com/2016-08-08-14706329335719.jpg">
-<meta property="og:image" content="http://7xpp6e.com1.z0.glb.clouddn.com/2016-08-08-14705746381111.jpg">
-<meta property="og:image" content="http://7xpp6e.com1.z0.glb.clouddn.com/2016-08-08-14705794444152.jpg">
-<meta property="og:updated_time" content="2016-10-25T15:49:20.000Z">
+<meta property="og:image" content="http://img.labmain.com/2016-11-07-072051.jpg">
+<meta property="og:image" content="http://img.labmain.com/2016-11-07-071157.jpg">
+<meta property="og:image" content="http://img.labmain.com/2016-11-07-071532.jpg">
+<meta property="og:updated_time" content="2016-11-07T07:21:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="程序员必备的翻墙姿势">
 <meta name="twitter:description" content="前言此篇文章，主要讲解Shadowdsocks的使用和配置。以及与VPN的对比。注意：此文章部分链接需要翻墙才能打开。
@@ -113,7 +113,7 @@
 你可以尝试打开一下网站：  Google、FaceBook、Youtube、Wikipedia、Twitter、Dropbox
 
 查看一些国外的技术网站：stackoverf">
-<meta name="twitter:image" content="http://7xpp6e.com1.z0.glb.clouddn.com/2016-08-08-14706329335719.jpg">
+<meta name="twitter:image" content="http://img.labmain.com/2016-11-07-072051.jpg">
 
 
 
@@ -320,7 +320,7 @@
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>此篇文章，主要讲解<code>Shadowdsocks</code>的使用和配置。以及与VPN的对比。<br><code>注意：此文章部分链接需要翻墙才能打开。</code></p>
 <h2 id="为什么要翻墙"><a href="#为什么要翻墙" class="headerlink" title="为什么要翻墙"></a>为什么要翻墙</h2><ul>
-<li><p>以下是15年某篇文章的标题：全球前30大英文网站中这16个天朝不能正常访问，配图请看：<br><img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016-08-08-14706329335719.jpg" alt=""></p>
+<li><p>以下是15年某篇文章的标题：全球前30大英文网站中这16个天朝不能正常访问，配图请看：<br><img src="http://img.labmain.com/2016-11-07-072051.jpg" alt=""></p>
 </li>
 <li><p>你可以尝试打开一下网站：<br>  <a href="https://www.gooogle.com" target="_blank" rel="external">Google</a>、<a href="https://www.facebook.com/" target="_blank" rel="external">FaceBook</a>、<a href="https://www.youtube.com/" target="_blank" rel="external">Youtube</a>、<a href="https://www.wikipedia.org/" target="_blank" rel="external">Wikipedia</a>、<a href="https://twitter.com/" target="_blank" rel="external">Twitter</a>、<a href="https://www.dropbox.com/" target="_blank" rel="external">Dropbox</a></p>
 </li>
@@ -364,15 +364,17 @@
 <li><a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="external">Windows(GitHub)</a></li>
 <li><a href="https://github.com/shadowsocks/shadowsocks-iOS/releases" target="_blank" rel="external">Mac(GitHub)</a></li>
 <li>由于<code>iOS</code>系统安全性，需要越狱才能安装<code>Shadowdsocks</code>，如果你已经越狱，你可以自行编译安装，<a href="https://github.com/shadowsocks/shadowsocks-iOS/archive/2.6.3.zip" target="_blank" rel="external">源码</a></li>
-<li><code>iOS</code>不越狱客户端推荐（以下软件使用了<code>iOS9</code>系统的新特性，也就是话说仅支持<code>iOS9+</code>）<ul>
+<li><p><code>iOS</code>不越狱客户端推荐（以下软件使用了<code>iOS9</code>系统的新特性，也就是话说仅支持<code>iOS9+</code>）</p>
+<ul>
 <li><a href="https://itunes.apple.com/cn/app/surge-web-developer-tool-proxy/id1040100637?mt=8" target="_blank" rel="external">Surge</a>:强烈推荐，虽然价格偏高，但是使用体验最好</li>
 <li><a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8" target="_blank" rel="external">Shadowrocket</a>：价格便宜，买不起上面的，就买这个吧</li>
+<li><a href="https://itunes.apple.com/app/apple-store/id1070901416?mt=8" target="_blank" rel="external">potatso</a>:价格比上面贵一些，但是代码<a href="https://github.com/shadowsocks/Potatso" target="_blank" rel="external">开源</a>,有能力的可以自己编译安装。</li>
 </ul>
 </li>
-<li><a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks" target="_blank" rel="external">Android(Google Play)</a></li>
+<li><p><a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks" target="_blank" rel="external">Android(Google Play)</a></p>
+</li>
 </ul>
-<h3 id="客户端使用"><a href="#客户端使用" class="headerlink" title="客户端使用"></a>客户端使用</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">搬瓦工SS帐号（2016-9-8过期）</div><div class="line">45.62.108.174:46352</div><div class="line">aes-256-cfb</div><div class="line">ZmM3YmQxYW</div></pre></td></tr></table></figure>
-<p>这里只介绍<code>MAC</code>系统使用，如果已经有了<code>Shadowsocks</code>帐号：<br><img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016-08-08-14705746381111.jpg" alt=""></p>
+<h3 id="客户端使用"><a href="#客户端使用" class="headerlink" title="客户端使用"></a>客户端使用</h3><p>这里只介绍<code>MAC</code>系统使用，如果已经有了<code>Shadowsocks</code>帐号：<br><img src="http://img.labmain.com/2016-11-07-071157.jpg" alt=""></p>
 <ol>
 <li>服务器设定 -&gt; <code>IP</code>、<code>端口</code>、<code>加密</code>、<code>密码</code>，一一对应填写。</li>
 <li>测试服务器是否配置成功：<ul>
@@ -408,8 +410,16 @@
 <p>小广告一下：如果选择了<code>Vultr</code>可以使用我这个链接，大家都会得到<code>$20</code>美元：<a href="http://www.vultr.com/?ref=6936225-3B" target="_blank" rel="external">http://www.vultr.com/?ref=6936225-3B</a></p>
 <h3 id="总结与注意："><a href="#总结与注意：" class="headerlink" title="总结与注意："></a>总结与注意：</h3><p>要想简单便宜，可以选择<code>搬瓦工</code>，但我自己贴身体会来讲，虽然刷网页虽然够了，但是看视频下载文件，还是有些慢，这个时候你可以选择<code>Vultr</code></p>
 <h2 id="Shadowdsocks配合其它软件使用"><a href="#Shadowdsocks配合其它软件使用" class="headerlink" title="Shadowdsocks配合其它软件使用"></a>Shadowdsocks配合其它软件使用</h2><p><code>shadowsocks</code>代理属于<code>socks5</code>代理，通俗的理解，<code>socks5</code>只是局部代理，不能像<code>vpn</code>那样把整个电脑都代理。因此，一般情况下只有支持<code>socks5</code>的软件才能使用<code>shadowsocks</code>代理。当然我们也可以借助其它软件来实现，具体见下面介绍：</p>
-<h3 id="Dropbox配置代理"><a href="#Dropbox配置代理" class="headerlink" title="Dropbox配置代理"></a>Dropbox配置代理</h3><p>设置-&gt;网络-&gt;手动-&gt;:<br><img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016-08-08-14705794444152.jpg" alt=""><br>配置见图，即可走本地<code>Shadowdsocks</code>代理</p>
+<h3 id="Dropbox配置代理"><a href="#Dropbox配置代理" class="headerlink" title="Dropbox配置代理"></a>Dropbox配置代理</h3><p>设置-&gt;网络-&gt;手动-&gt;:<br><img src="http://img.labmain.com/2016-11-07-071532.jpg" alt=""><br>配置见图，即可走本地<code>Shadowdsocks</code>代理</p>
+<blockquote>
+<p>存在的问题：Dropbox 安装之后，第一次启动是不走代理的，需要全局代理也不行。不清楚是什么原因，我是使用VPN第一次启动的。</p>
+</blockquote>
 <h3 id="使用proxifier代理指定程序"><a href="#使用proxifier代理指定程序" class="headerlink" title="使用proxifier代理指定程序"></a>使用proxifier代理指定程序</h3><p>具体参见：<a href="http://chaishiwei.com/blog/830.html" target="_blank" rel="external">Proxifier：给某个单独应用配置代理上网服务</a></p>
+<h3 id="终端走代理的方法"><a href="#终端走代理的方法" class="headerlink" title="终端走代理的方法"></a>终端走代理的方法</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 在终端下使用 </span></div><div class="line"><span class="built_in">export</span> ALL_PROXY=socks5://127.0.0.1:1080</div><div class="line"><span class="comment"># 清除代理 </span></div><div class="line"><span class="built_in">unset</span> ALL_PROXY</div></pre></td></tr></table></figure>
+<p>为了测试是否成功可以<code>curl -i http://ip.cn</code> 查看ip</p>
+<p>以上命令只对本窗口生效，为了方便呢，可以在<code>~/.bash_profile</code>中加上这个。（如果没有<code>bash_profile</code>文件自行创建）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">setproxy</span></span>() &#123;</div><div class="line">    <span class="comment"># export &#123;HTTP,HTTPS,FTP&#125;_PROXY="http://127.0.0.1:3128" 也可以设置http代理</span></div><div class="line">    <span class="built_in">export</span> ALL_PROXY=socks5://127.0.0.1:1080</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">unsetproxy</span></span>() &#123;</div><div class="line">    <span class="comment"># unset &#123;HTTP,HTTPS,FTP&#125;_PROXY</span></div><div class="line">    <span class="built_in">unset</span> ALL_PROXY</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>需要使用代理的时候<code>setproxy</code>，不用了就<code>unsetproxy</code><br>就可以很方便的在<code>shell</code>环境下切换设置代理了。</p>
 <h3 id="ProxyChains-NG终端下代理"><a href="#ProxyChains-NG终端下代理" class="headerlink" title="ProxyChains-NG终端下代理"></a>ProxyChains-NG终端下代理</h3><p>具体参加：<a href="http://janrone.com/2016/03/26/Mac%E4%B8%8B%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE-ProxyChains-NG-%E5%AE%9E%E7%8E%B0%E7%BB%88%E7%AB%AF%E4%B8%8B%E4%BB%A3%E7%90%86/" target="_blank" rel="external">Mac下安装及配置 ProxyChains-NG 实现终端下代理</a></p>
 <p>如果安装成功之后，不能使用代理的话，需要关闭 <code>SIP</code>，具体见： <a href="http://blog.csdn.net/nicekwell/article/details/49206435" target="_blank" rel="external">解决os x el capitan proxychains 不能用 （关闭SIP）</a></p>
 <h3 id="路由器上使用Shadowdsocks代理局域网"><a href="#路由器上使用Shadowdsocks代理局域网" class="headerlink" title="路由器上使用Shadowdsocks代理局域网"></a>路由器上使用Shadowdsocks代理局域网</h3><p>每个路由器都不太一样，自行谷歌吧。</p>
@@ -434,6 +444,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Shadowdsocks/" rel="tag">#Shadowdsocks</a>
+          
+        </div>
       
 
       
@@ -535,7 +551,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -564,7 +580,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要翻墙"><span class="nav-number">2.</span> <span class="nav-text">为什么要翻墙</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#翻墙的几种手段"><span class="nav-number">3.</span> <span class="nav-text">翻墙的几种手段</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#VPN"><span class="nav-number">3.1.</span> <span class="nav-text">VPN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowdsocks"><span class="nav-number">3.2.</span> <span class="nav-text">Shadowdsocks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于VPN"><span class="nav-number">3.3.</span> <span class="nav-text">关于VPN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用和配置Shadowdsocks客户端"><span class="nav-number">4.</span> <span class="nav-text">使用和配置Shadowdsocks客户端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端下载"><span class="nav-number">4.1.</span> <span class="nav-text">客户端下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端使用"><span class="nav-number">4.2.</span> <span class="nav-text">客户端使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Shadowdsocks服务器"><span class="nav-number">5.</span> <span class="nav-text">配置Shadowdsocks服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器选择一：搬瓦工bandwagonhost"><span class="nav-number">5.1.</span> <span class="nav-text">服务器选择一：搬瓦工bandwagonhost</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器选择二：Vultr"><span class="nav-number">5.2.</span> <span class="nav-text">服务器选择二：Vultr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结与注意："><span class="nav-number">5.3.</span> <span class="nav-text">总结与注意：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shadowdsocks配合其它软件使用"><span class="nav-number">6.</span> <span class="nav-text">Shadowdsocks配合其它软件使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dropbox配置代理"><span class="nav-number">6.1.</span> <span class="nav-text">Dropbox配置代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用proxifier代理指定程序"><span class="nav-number">6.2.</span> <span class="nav-text">使用proxifier代理指定程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ProxyChains-NG终端下代理"><span class="nav-number">6.3.</span> <span class="nav-text">ProxyChains-NG终端下代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由器上使用Shadowdsocks代理局域网"><span class="nav-number">6.4.</span> <span class="nav-text">路由器上使用Shadowdsocks代理局域网</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shadowdsocks-进阶"><span class="nav-number">7.</span> <span class="nav-text">Shadowdsocks 进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowdsocks加速的几种方案"><span class="nav-number">7.1.</span> <span class="nav-text">Shadowdsocks加速的几种方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowdsocks多用户配置"><span class="nav-number">7.2.</span> <span class="nav-text">Shadowdsocks多用户配置</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要翻墙"><span class="nav-number">2.</span> <span class="nav-text">为什么要翻墙</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#翻墙的几种手段"><span class="nav-number">3.</span> <span class="nav-text">翻墙的几种手段</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#VPN"><span class="nav-number">3.1.</span> <span class="nav-text">VPN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowdsocks"><span class="nav-number">3.2.</span> <span class="nav-text">Shadowdsocks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于VPN"><span class="nav-number">3.3.</span> <span class="nav-text">关于VPN</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用和配置Shadowdsocks客户端"><span class="nav-number">4.</span> <span class="nav-text">使用和配置Shadowdsocks客户端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端下载"><span class="nav-number">4.1.</span> <span class="nav-text">客户端下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端使用"><span class="nav-number">4.2.</span> <span class="nav-text">客户端使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Shadowdsocks服务器"><span class="nav-number">5.</span> <span class="nav-text">配置Shadowdsocks服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器选择一：搬瓦工bandwagonhost"><span class="nav-number">5.1.</span> <span class="nav-text">服务器选择一：搬瓦工bandwagonhost</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器选择二：Vultr"><span class="nav-number">5.2.</span> <span class="nav-text">服务器选择二：Vultr</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结与注意："><span class="nav-number">5.3.</span> <span class="nav-text">总结与注意：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shadowdsocks配合其它软件使用"><span class="nav-number">6.</span> <span class="nav-text">Shadowdsocks配合其它软件使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dropbox配置代理"><span class="nav-number">6.1.</span> <span class="nav-text">Dropbox配置代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用proxifier代理指定程序"><span class="nav-number">6.2.</span> <span class="nav-text">使用proxifier代理指定程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#终端走代理的方法"><span class="nav-number">6.3.</span> <span class="nav-text">终端走代理的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ProxyChains-NG终端下代理"><span class="nav-number">6.4.</span> <span class="nav-text">ProxyChains-NG终端下代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由器上使用Shadowdsocks代理局域网"><span class="nav-number">6.5.</span> <span class="nav-text">路由器上使用Shadowdsocks代理局域网</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shadowdsocks-进阶"><span class="nav-number">7.</span> <span class="nav-text">Shadowdsocks 进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowdsocks加速的几种方案"><span class="nav-number">7.1.</span> <span class="nav-text">Shadowdsocks加速的几种方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowdsocks多用户配置"><span class="nav-number">7.2.</span> <span class="nav-text">Shadowdsocks多用户配置</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

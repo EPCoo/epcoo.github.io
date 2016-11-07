@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://labmain.com/"/>
-  <updated>2016-11-02T13:35:51.000Z</updated>
+  <updated>2016-11-02T13:37:30.000Z</updated>
   <id>http://labmain.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://labmain.com/2016/11/02/LLDB_debugging_skills/"/>
     <id>http://labmain.com/2016/11/02/LLDB_debugging_skills/</id>
     <published>2016-11-02T13:31:12.000Z</published>
-    <updated>2016-11-02T13:35:51.000Z</updated>
+    <updated>2016-11-02T13:37:30.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="LLDB的基础使用"><a href="#LLDB的基础使用" class="headerlink" title="LLDB的基础使用"></a>LLDB的基础使用</h1><h2 id="help-lt-command-gt"><a href="#help-lt-command-gt" class="headerlink" title="help &lt; command &gt;"></a>help &lt; command &gt;</h2><p>最简单命令是<code>help</code>，它会列举出所有的命令。<br>例如: </p>
 <figure class="highlight objc"><table><tr><td class="code"><pre><div class="line">help print 或者 help thread。</div></pre></td></tr></table></figure>
@@ -232,9 +232,9 @@
     <link href="http://labmain.com/2016/07/26/Xcode_Shortcut_Key/"/>
     <id>http://labmain.com/2016/07/26/Xcode_Shortcut_Key/</id>
     <published>2016-07-26T03:35:26.000Z</published>
-    <updated>2016-07-26T03:36:12.000Z</updated>
+    <updated>2016-11-07T07:20:42.000Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://cc.cocimg.com/api/uploads/20160204/1454553083700274.png" alt="快捷键对应图标"></p>
+    <content type="html"><![CDATA[<p><img src="http://img.labmain.com/2016-11-07-072038.jpg" alt=""></p>
 <h1 id="Mac-相关"><a href="#Mac-相关" class="headerlink" title="Mac 相关"></a>Mac 相关</h1><p>程序切换         <code>cmd + ~</code><br>程序内切换       <code>cmd + tap</code>  </p>
 <p>偏好设置         <code>cmd + ,</code>  </p>
 <p>隐藏Xcode       <code>cmd + h</code><br>隐藏其他窗口      <code>cmd + option + H</code>  </p>
@@ -261,8 +261,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://cc.cocimg.com/api/uploads/20160204/1454553083700274.png&quot; alt=&quot;快捷键对应图标&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Mac-相关&quot;&gt;&lt;a href=&quot;#Mac-相关&quot; class=&quot;hea
+      &lt;p&gt;&lt;img src=&quot;http://img.labmain.com/2016-11-07-072038.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Mac-相关&quot;&gt;&lt;a href=&quot;#Mac-相关&quot; class=&quot;headerlink&quot; title=&quot;Mac 相关&quot;&gt;&lt;
     
     </summary>
     
@@ -278,11 +278,11 @@
     <link href="http://labmain.com/2016/07/07/The_programmer_must_learn_Science_online/"/>
     <id>http://labmain.com/2016/07/07/The_programmer_must_learn_Science_online/</id>
     <published>2016-07-07T04:33:43.000Z</published>
-    <updated>2016-10-25T15:49:20.000Z</updated>
+    <updated>2016-11-07T07:21:19.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>此篇文章，主要讲解<code>Shadowdsocks</code>的使用和配置。以及与VPN的对比。<br><code>注意：此文章部分链接需要翻墙才能打开。</code></p>
 <h2 id="为什么要翻墙"><a href="#为什么要翻墙" class="headerlink" title="为什么要翻墙"></a>为什么要翻墙</h2><ul>
-<li><p>以下是15年某篇文章的标题：全球前30大英文网站中这16个天朝不能正常访问，配图请看：<br><img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016-08-08-14706329335719.jpg" alt=""></p>
+<li><p>以下是15年某篇文章的标题：全球前30大英文网站中这16个天朝不能正常访问，配图请看：<br><img src="http://img.labmain.com/2016-11-07-072051.jpg" alt=""></p>
 </li>
 <li><p>你可以尝试打开一下网站：<br>  <a href="https://www.gooogle.com" target="_blank" rel="external">Google</a>、<a href="https://www.facebook.com/" target="_blank" rel="external">FaceBook</a>、<a href="https://www.youtube.com/" target="_blank" rel="external">Youtube</a>、<a href="https://www.wikipedia.org/" target="_blank" rel="external">Wikipedia</a>、<a href="https://twitter.com/" target="_blank" rel="external">Twitter</a>、<a href="https://www.dropbox.com/" target="_blank" rel="external">Dropbox</a></p>
 </li>
@@ -326,15 +326,17 @@
 <li><a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="external">Windows(GitHub)</a></li>
 <li><a href="https://github.com/shadowsocks/shadowsocks-iOS/releases" target="_blank" rel="external">Mac(GitHub)</a></li>
 <li>由于<code>iOS</code>系统安全性，需要越狱才能安装<code>Shadowdsocks</code>，如果你已经越狱，你可以自行编译安装，<a href="https://github.com/shadowsocks/shadowsocks-iOS/archive/2.6.3.zip" target="_blank" rel="external">源码</a></li>
-<li><code>iOS</code>不越狱客户端推荐（以下软件使用了<code>iOS9</code>系统的新特性，也就是话说仅支持<code>iOS9+</code>）<ul>
+<li><p><code>iOS</code>不越狱客户端推荐（以下软件使用了<code>iOS9</code>系统的新特性，也就是话说仅支持<code>iOS9+</code>）</p>
+<ul>
 <li><a href="https://itunes.apple.com/cn/app/surge-web-developer-tool-proxy/id1040100637?mt=8" target="_blank" rel="external">Surge</a>:强烈推荐，虽然价格偏高，但是使用体验最好</li>
 <li><a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8" target="_blank" rel="external">Shadowrocket</a>：价格便宜，买不起上面的，就买这个吧</li>
+<li><a href="https://itunes.apple.com/app/apple-store/id1070901416?mt=8" target="_blank" rel="external">potatso</a>:价格比上面贵一些，但是代码<a href="https://github.com/shadowsocks/Potatso" target="_blank" rel="external">开源</a>,有能力的可以自己编译安装。</li>
 </ul>
 </li>
-<li><a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks" target="_blank" rel="external">Android(Google Play)</a></li>
+<li><p><a href="https://play.google.com/store/apps/details?id=com.github.shadowsocks" target="_blank" rel="external">Android(Google Play)</a></p>
+</li>
 </ul>
-<h3 id="客户端使用"><a href="#客户端使用" class="headerlink" title="客户端使用"></a>客户端使用</h3><figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">搬瓦工SS帐号（2016-9-8过期）</div><div class="line">45.62.108.174:46352</div><div class="line">aes-256-cfb</div><div class="line">ZmM3YmQxYW</div></pre></td></tr></table></figure>
-<p>这里只介绍<code>MAC</code>系统使用，如果已经有了<code>Shadowsocks</code>帐号：<br><img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016-08-08-14705746381111.jpg" alt=""></p>
+<h3 id="客户端使用"><a href="#客户端使用" class="headerlink" title="客户端使用"></a>客户端使用</h3><p>这里只介绍<code>MAC</code>系统使用，如果已经有了<code>Shadowsocks</code>帐号：<br><img src="http://img.labmain.com/2016-11-07-071157.jpg" alt=""></p>
 <ol>
 <li>服务器设定 -&gt; <code>IP</code>、<code>端口</code>、<code>加密</code>、<code>密码</code>，一一对应填写。</li>
 <li>测试服务器是否配置成功：<ul>
@@ -370,8 +372,16 @@
 <p>小广告一下：如果选择了<code>Vultr</code>可以使用我这个链接，大家都会得到<code>$20</code>美元：<a href="http://www.vultr.com/?ref=6936225-3B" target="_blank" rel="external">http://www.vultr.com/?ref=6936225-3B</a></p>
 <h3 id="总结与注意："><a href="#总结与注意：" class="headerlink" title="总结与注意："></a>总结与注意：</h3><p>要想简单便宜，可以选择<code>搬瓦工</code>，但我自己贴身体会来讲，虽然刷网页虽然够了，但是看视频下载文件，还是有些慢，这个时候你可以选择<code>Vultr</code></p>
 <h2 id="Shadowdsocks配合其它软件使用"><a href="#Shadowdsocks配合其它软件使用" class="headerlink" title="Shadowdsocks配合其它软件使用"></a>Shadowdsocks配合其它软件使用</h2><p><code>shadowsocks</code>代理属于<code>socks5</code>代理，通俗的理解，<code>socks5</code>只是局部代理，不能像<code>vpn</code>那样把整个电脑都代理。因此，一般情况下只有支持<code>socks5</code>的软件才能使用<code>shadowsocks</code>代理。当然我们也可以借助其它软件来实现，具体见下面介绍：</p>
-<h3 id="Dropbox配置代理"><a href="#Dropbox配置代理" class="headerlink" title="Dropbox配置代理"></a>Dropbox配置代理</h3><p>设置-&gt;网络-&gt;手动-&gt;:<br><img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016-08-08-14705794444152.jpg" alt=""><br>配置见图，即可走本地<code>Shadowdsocks</code>代理</p>
+<h3 id="Dropbox配置代理"><a href="#Dropbox配置代理" class="headerlink" title="Dropbox配置代理"></a>Dropbox配置代理</h3><p>设置-&gt;网络-&gt;手动-&gt;:<br><img src="http://img.labmain.com/2016-11-07-071532.jpg" alt=""><br>配置见图，即可走本地<code>Shadowdsocks</code>代理</p>
+<blockquote>
+<p>存在的问题：Dropbox 安装之后，第一次启动是不走代理的，需要全局代理也不行。不清楚是什么原因，我是使用VPN第一次启动的。</p>
+</blockquote>
 <h3 id="使用proxifier代理指定程序"><a href="#使用proxifier代理指定程序" class="headerlink" title="使用proxifier代理指定程序"></a>使用proxifier代理指定程序</h3><p>具体参见：<a href="http://chaishiwei.com/blog/830.html" target="_blank" rel="external">Proxifier：给某个单独应用配置代理上网服务</a></p>
+<h3 id="终端走代理的方法"><a href="#终端走代理的方法" class="headerlink" title="终端走代理的方法"></a>终端走代理的方法</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment"># 在终端下使用 </span></div><div class="line"><span class="built_in">export</span> ALL_PROXY=socks5://127.0.0.1:1080</div><div class="line"><span class="comment"># 清除代理 </span></div><div class="line"><span class="built_in">unset</span> ALL_PROXY</div></pre></td></tr></table></figure>
+<p>为了测试是否成功可以<code>curl -i http://ip.cn</code> 查看ip</p>
+<p>以上命令只对本窗口生效，为了方便呢，可以在<code>~/.bash_profile</code>中加上这个。（如果没有<code>bash_profile</code>文件自行创建）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">setproxy</span></span>() &#123;</div><div class="line">    <span class="comment"># export &#123;HTTP,HTTPS,FTP&#125;_PROXY="http://127.0.0.1:3128" 也可以设置http代理</span></div><div class="line">    <span class="built_in">export</span> ALL_PROXY=socks5://127.0.0.1:1080</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">unsetproxy</span></span>() &#123;</div><div class="line">    <span class="comment"># unset &#123;HTTP,HTTPS,FTP&#125;_PROXY</span></div><div class="line">    <span class="built_in">unset</span> ALL_PROXY</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>需要使用代理的时候<code>setproxy</code>，不用了就<code>unsetproxy</code><br>就可以很方便的在<code>shell</code>环境下切换设置代理了。</p>
 <h3 id="ProxyChains-NG终端下代理"><a href="#ProxyChains-NG终端下代理" class="headerlink" title="ProxyChains-NG终端下代理"></a>ProxyChains-NG终端下代理</h3><p>具体参加：<a href="http://janrone.com/2016/03/26/Mac%E4%B8%8B%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE-ProxyChains-NG-%E5%AE%9E%E7%8E%B0%E7%BB%88%E7%AB%AF%E4%B8%8B%E4%BB%A3%E7%90%86/" target="_blank" rel="external">Mac下安装及配置 ProxyChains-NG 实现终端下代理</a></p>
 <p>如果安装成功之后，不能使用代理的话，需要关闭 <code>SIP</code>，具体见： <a href="http://blog.csdn.net/nicekwell/article/details/49206435" target="_blank" rel="external">解决os x el capitan proxychains 不能用 （关闭SIP）</a></p>
 <h3 id="路由器上使用Shadowdsocks代理局域网"><a href="#路由器上使用Shadowdsocks代理局域网" class="headerlink" title="路由器上使用Shadowdsocks代理局域网"></a>路由器上使用Shadowdsocks代理局域网</h3><p>每个路由器都不太一样，自行谷歌吧。</p>
@@ -388,6 +398,8 @@
       <category term="互联网" scheme="http://labmain.com/categories/%E4%BA%92%E8%81%94%E7%BD%91/"/>
     
     
+      <category term="Shadowdsocks" scheme="http://labmain.com/tags/Shadowdsocks/"/>
+    
   </entry>
   
   <entry>
@@ -395,10 +407,10 @@
     <link href="http://labmain.com/2016/05/05/xcode_7_not_highlighting_code/"/>
     <id>http://labmain.com/2016/05/05/xcode_7_not_highlighting_code/</id>
     <published>2016-05-05T09:22:56.000Z</published>
-    <updated>2016-05-05T09:46:35.000Z</updated>
+    <updated>2016-11-07T07:20:32.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近项目碰到 Xcode 代码无法显示的问题,具体如下:</p>
-<p><img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016-05-05-14624407838056.jpg" alt=""></p>
+<p><img src="http://img.labmain.com/2016-11-07-072019.jpg" alt=""></p>
 <p>类名和方法名都无法显示, 并且无法跳转</p>
 <p>在百度的搜索下大多找到的是以下方法:</p>
 <pre><code>1. clean 一下
@@ -411,15 +423,16 @@
 <li>修改 <code>Enable Modules</code> 的值<br> 到你的项目的 <code>Build Settings</code> 中,找到 <code>Enable Modules</code><br> 如果值是 <code>YES</code> ,修改为 <code>NO</code>,然后 编译以下,会报错,之后再修改为 <code>YES</code></li>
 </ol>
 <p>经过上面两个操作之后,你还需要 <code>Clean</code>(Shift + Command + K)一下</p>
-<p>最终解决了我的问题!!<br><img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016-05-05-14624414646114.jpg" alt=""></p>
+<p>最终解决了我的问题!!<br><img src="http://img.labmain.com/2016-11-07-072026.jpg" alt=""></p>
 <p>附上stackoverflow原帖: <a href="http://stackoverflow.com/questions/36165865/xcode-7-3-syntax-highlighting-and-code-completion-issues-with-swift" target="_blank" rel="external">http://stackoverflow.com/questions/36165865/xcode-7-3-syntax-highlighting-and-code-completion-issues-with-swift</a></p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;最近项目碰到 Xcode 代码无法显示的问题,具体如下:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://7xpp6e.com1.z0.glb.clouddn.com/2016-05-05-14624407838056.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;类名和方法名都
+&lt;p&gt;&lt;img src=&quot;http://img.labmain.com/2016-11-07-072019.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;类名和方法名都无法显示, 并且无法跳转&lt;/p&gt;
+&lt;p&gt;在百度
     
     </summary>
     
@@ -435,7 +448,7 @@
     <link href="http://labmain.com/2016/04/06/A_Alfred_Workflow_upload_clipboard&#39;image_to_qiniu/"/>
     <id>http://labmain.com/2016/04/06/A_Alfred_Workflow_upload_clipboard&#39;image_to_qiniu/</id>
     <published>2016-04-06T12:29:19.000Z</published>
-    <updated>2016-07-08T08:18:15.000Z</updated>
+    <updated>2016-11-07T07:20:14.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>虽然MWeb可以方便上传本地图片到图床，但是操作还是比较麻烦，如果能够截图之后就直接上传图床，并且返回Markdown格式的链接，岂不是更方便。</p>
 <h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ol>
@@ -447,10 +460,10 @@
 <h3 id="代码说明"><a href="#代码说明" class="headerlink" title="代码说明"></a>代码说明</h3><p>需要安装 pngpaste，可以使用 homebrew 安装： <code>brew install pngpaste</code></p>
 <h3 id="代码存在的问题"><a href="#代码存在的问题" class="headerlink" title="代码存在的问题"></a>代码存在的问题</h3><p>仅能识别截图，不能上传file。</p>
 <h3 id="添加到-Alfred"><a href="#添加到-Alfred" class="headerlink" title="添加到 Alfred"></a>添加到 Alfred</h3><p>新建一个Workflow，设置快捷键，然后把代码拷贝到 Run Script，第三个是获取打印的结果。</p>
-<p><img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016_04_06_20_38_41.png" alt=""></p>
+<p><img src="http://img.labmain.com/2016-11-07-071733.jpg" alt=""></p>
 <p>获取到 Python 打印的 字符串到剪贴板</p>
-<p><img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016_04_06_20_39_48.png" alt=""></p>
-<h3 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h3><p><img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016-04-07-2016-04-07 14_49_51.gif" alt=""></p>
+<p><img src="http://img.labmain.com/2016-11-07-071755.jpg" alt=""></p>
+<h3 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h3><p><img src="http://img.labmain.com/2016-11-07-2016-04-07-2016-04-07%2014_49_51.gif" alt=""></p>
 ]]></content>
     
     <summary type="html">
@@ -475,24 +488,24 @@
     <link href="http://labmain.com/2016/04/06/Proxifier_with_SS_agent_designated_procedures/"/>
     <id>http://labmain.com/2016/04/06/Proxifier_with_SS_agent_designated_procedures/</id>
     <published>2016-04-06T12:22:17.000Z</published>
-    <updated>2016-04-07T06:27:46.000Z</updated>
+    <updated>2016-11-07T07:17:27.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="Proxifier-简介"><a href="#Proxifier-简介" class="headerlink" title="Proxifier 简介"></a>Proxifier 简介</h4><p>Proxifier是一款功能非常强大的socks5客户端，可以让不支持通过代理服务器工作的网络程序能通过https或socks代理或代理链。支持socks4，socks5，http代理协议，支持tcp，udp协议，可以指定端口，指定ip，指定程序等运行模式，兼容性非常好。</p>
 <h4 id="配合-ShadowSocks-代理指定程序"><a href="#配合-ShadowSocks-代理指定程序" class="headerlink" title="配合 ShadowSocks 代理指定程序"></a>配合 ShadowSocks 代理指定程序</h4><ol>
 <li><p>前提是 ShadowSocks 已经配置好，然后去<a href="https://www.proxifier.com/" target="_blank" rel="external">官网</a>下载 Proxifier 安装。</p>
 </li>
 <li><p>添加一个ShadowSocks的本地代理</p>
-<p> <img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016_04_06_20_07_53.png" alt=""></p>
-<p> <img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016_04_06_20_08_55.png" alt=""></p>
+<p> <img src="http://img.labmain.com/2016-11-07-071615.jpg" alt=""></p>
+<p> <img src="http://img.labmain.com/2016-11-07-071634.jpg" alt=""></p>
 </li>
 </ol>
 <ol>
 <li><p>添加一个规则</p>
-<p> <img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016_04_06_20_10_07.png" alt=""></p>
-<p> <img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016_04_06_20_11_11.png" alt=""></p>
+<p> <img src="http://img.labmain.com/2016-11-07-071656.jpg" alt=""></p>
+<p> <img src="http://img.labmain.com/2016-11-07-071703.jpg" alt=""></p>
 </li>
 </ol>
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>经过上面的操作就可以通过 ShadowSocks 的 1080 端口走代理了。不过需要注意的是，这个软件默认是全部走代理的，记得修改一下：<br>    <img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016_04_06_20_13_03.png" alt=""></p>
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>经过上面的操作就可以通过 ShadowSocks 的 1080 端口走代理了。不过需要注意的是，这个软件默认是全部走代理的，记得修改一下：<br>    <img src="http://img.labmain.com/2016-11-07-071715.jpg" alt=""></p>
 ]]></content>
     
     <summary type="html">
@@ -513,7 +526,7 @@
     <link href="http://labmain.com/2016/03/22/HTTP_Message/"/>
     <id>http://labmain.com/2016/03/22/HTTP_Message/</id>
     <published>2016-03-22T12:01:52.000Z</published>
-    <updated>2016-07-12T07:26:06.000Z</updated>
+    <updated>2016-11-07T07:16:10.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="媒体类型"><a href="#媒体类型" class="headerlink" title="媒体类型"></a>媒体类型</h2><p>为了区分不同数据类型，HTTP 给每种通过 Web 传输的对象打上了名为 <code>MIME</code> 类型的数据格式标签，当 Web 浏览器从服务器中取出一个对象时，会去查看相关的</p>
 <h4 id="常见的-MIME-类型："><a href="#常见的-MIME-类型：" class="headerlink" title="常见的 MIME 类型："></a>常见的 MIME 类型：</h4><ul>
@@ -524,9 +537,9 @@
 <li>Apple QuickTime 视频为 <code>video/quicktime</code> 类型</li>
 <li>微软的 PowerPoint 演示文件为 <code>application/vnd.ms-powerpoint</code> 类型。</li>
 </ul>
-<h2 id="HTTP-报文"><a href="#HTTP-报文" class="headerlink" title="HTTP 报文"></a>HTTP 报文</h2><p>一个 HTTP 事务由一条（客户端发往服务器的）请求命令和一个（从服务器返回给客户端的）响应结果组成。这种通信是通过名为 HTTP 报文（HTTP message）的格式化数据块进行的如图所示：<br><img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016-03-22-14586489984382.jpg" alt=""></p>
+<h2 id="HTTP-报文"><a href="#HTTP-报文" class="headerlink" title="HTTP 报文"></a>HTTP 报文</h2><p>一个 HTTP 事务由一条（客户端发往服务器的）请求命令和一个（从服务器返回给客户端的）响应结果组成。这种通信是通过名为 HTTP 报文（HTTP message）的格式化数据块进行的如图所示：<br><img src="http://img.labmain.com/2016-11-07-071557.jpg" alt=""></p>
 <h4 id="报文实例"><a href="#报文实例" class="headerlink" title="报文实例"></a>报文实例</h4><p>浏览器发送了一条 HTTP 请求报文。这条请求的起始行中有一个 GET 命令，且本地资源为 <code>/tools.html</code> 。 这条请求说明它使用的是 1.0 版的 HTTP 协议。 请求报文没有主体，因为从服务器上 GET 一个简单的文档不需要请求数据。</p>
-<p>服务器会回送一条 HTTP 响应报文。这条响应中包含了 HTTP 的版本号(HTTP/1.0)、 一个成功状态码(200)、一个描述性的原因短语(OK), 以及一块响应首部字段, 在所有这些内容之后跟着包含了所请求文档的响应主体。 <code>Content-Length</code> 首部说明了响应主体的长度, <code>Content-Type</code> 首部说明了文档的 MIME 类型。<br><img src="http://7xpp6e.com1.z0.glb.clouddn.com/2016-03-22-14586523117052.jpg" alt=""></p>
+<p>服务器会回送一条 HTTP 响应报文。这条响应中包含了 HTTP 的版本号(HTTP/1.0)、 一个成功状态码(200)、一个描述性的原因短语(OK), 以及一块响应首部字段, 在所有这些内容之后跟着包含了所请求文档的响应主体。 <code>Content-Length</code> 首部说明了响应主体的长度, <code>Content-Type</code> 首部说明了文档的 MIME 类型。<br><img src="http://img.labmain.com/2016-11-07-071604.jpg" alt=""></p>
 <h4 id="解析实例"><a href="#解析实例" class="headerlink" title="解析实例"></a>解析实例</h4><ol>
 <li><p><strong>请求</strong></p>
 <ul>
