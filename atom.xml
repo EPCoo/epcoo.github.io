@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://labmain.com/"/>
-  <updated>2016-11-02T13:37:30.000Z</updated>
+  <updated>2017-02-11T19:11:01.000Z</updated>
   <id>http://labmain.com/</id>
   
   <author>
@@ -16,11 +16,45 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>UICollectionView 按照 Cell 宽度分页</title>
+    <link href="http://labmain.com/2017/02/12/UICollectionView_Setting_Page_With_CellWidth/"/>
+    <id>http://labmain.com/2017/02/12/UICollectionView_Setting_Page_With_CellWidth/</id>
+    <published>2017-02-11T19:10:55.000Z</published>
+    <updated>2017-02-11T19:11:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img src="http://img.labmain.com/2017-02-11-1486452112.gif" alt=""></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>如果直接打开系统的<code>pagingEnabled</code>分页, 它只会根据Cell的Bounds分页。如果cell不是屏幕宽度的话，就不能使用了，需要我们对滚动进行计算了。</p>
+<h2 id="方案一"><a href="#方案一" class="headerlink" title="方案一"></a>方案一</h2><figure class="highlight objc"><table><tr><td class="code"><pre><div class="line">- (<span class="keyword">void</span>)scrollViewWillEndDragging:(<span class="built_in">UIScrollView</span> *)scrollView withVelocity:(<span class="built_in">CGPoint</span>)velocity targetContentOffset:(<span class="keyword">inout</span> <span class="built_in">CGPoint</span> *)targetContentOffset &#123;</div><div class="line">    *targetContentOffset = scrollView.contentOffset; <span class="comment">// set acceleration to 0.0</span></div><div class="line">    <span class="keyword">float</span> pageWidth = (<span class="keyword">float</span>)<span class="keyword">self</span>.articlesCollectionView.bounds.size.width;</div><div class="line">    <span class="keyword">int</span> minSpace = <span class="number">10</span>;</div><div class="line"></div><div class="line">    <span class="keyword">int</span> cellToSwipe = (scrollView.contentOffset.x)/(pageWidth + minSpace) + <span class="number">0.5</span>; <span class="comment">// cell width + min spacing for lines</span></div><div class="line">    <span class="keyword">if</span> (cellToSwipe &lt; <span class="number">0</span>) &#123;</div><div class="line">        cellToSwipe = <span class="number">0</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (cellToSwipe &gt;= <span class="keyword">self</span>.articles.count) &#123;</div><div class="line">        cellToSwipe = <span class="keyword">self</span>.articles.count - <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    [<span class="keyword">self</span>.articlesCollectionView scrollToItemAtIndexPath:[<span class="built_in">NSIndexPath</span> indexPathForRow:cellToSwipe inSection:<span class="number">0</span>] atScrollPosition:<span class="built_in">UICollectionViewScrollPositionLeft</span> animated:<span class="literal">YES</span>];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在手指松开的时候，开始计算滚动的下一个位置。这个方法虽然也可以实现需求，但是效果比较生硬，不是很推荐。</p>
+<p>具体可以看 ：<a href="http://tech.glowing.com/cn/practice-in-uiscrollview/" target="_blank" rel="external">查看其中的「分页的几种实现方式」</a></p>
+<h2 id="方案二"><a href="#方案二" class="headerlink" title="方案二"></a>方案二</h2><figure class="highlight objc"><table><tr><td class="code"><pre><div class="line">- (<span class="built_in">CGPoint</span>)targetContentOffsetForProposedContentOffset:(<span class="built_in">CGPoint</span>)offset</div><div class="line">                                 withScrollingVelocity:(<span class="built_in">CGPoint</span>)velocity &#123;</div><div class="line"></div><div class="line">    <span class="built_in">CGRect</span> cvBounds = <span class="keyword">self</span>.collectionView.bounds;</div><div class="line">    <span class="built_in">CGFloat</span> halfWidth = cvBounds.size.width * <span class="number">0.5</span>f;</div><div class="line">    <span class="built_in">CGFloat</span> proposedContentOffsetCenterX = offset.x + halfWidth;</div><div class="line"></div><div class="line">    <span class="built_in">NSArray</span>* attributesArray = [<span class="keyword">self</span> layoutAttributesForElementsInRect:cvBounds];</div><div class="line"></div><div class="line">    <span class="built_in">UICollectionViewLayoutAttributes</span>* candidateAttributes;</div><div class="line">    <span class="keyword">for</span> (<span class="built_in">UICollectionViewLayoutAttributes</span>* attributes <span class="keyword">in</span> attributesArray) &#123;</div><div class="line"></div><div class="line">        <span class="comment">// == Skip comparison with non-cell items (headers and footers) == //</span></div><div class="line">        <span class="keyword">if</span> (attributes.representedElementCategory !=</div><div class="line">            <span class="built_in">UICollectionElementCategoryCell</span>) &#123;</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">// == First time in the loop == //</span></div><div class="line">        <span class="keyword">if</span>(!candidateAttributes) &#123;</div><div class="line">            candidateAttributes = attributes;</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (fabs(attributes.center.x - proposedContentOffsetCenterX) &lt;</div><div class="line">            fabs(candidateAttributes.center.x - proposedContentOffsetCenterX)) &#123;</div><div class="line">            candidateAttributes = attributes;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="built_in">CGPointMake</span>(candidateAttributes.center.x - halfWidth, offset.y);</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>通过重写UICollectionViewLayout的方法，根据计算返回最终的悬停位置。</p>
+<h2 id="目前还存在的问题"><a href="#目前还存在的问题" class="headerlink" title="目前还存在的问题"></a>目前还存在的问题</h2><p>滑动如果比较慢的话，它跳转到下一页的也会比较慢。</p>
+<p>可以通过设置 <code>decelerationRate</code> 的值，来决定手指放开后的减速率，范围为0-1。然而经过测试，发现是可以加速，但是会出现莫名的卡顿。</p>
+<h2 id="Demo-地址"><a href="#Demo-地址" class="headerlink" title="Demo 地址"></a>Demo 地址</h2><p><a href="https://github.com/labmain/UICollectionViewCellWidthPage" target="_blank" rel="external">github</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;效果展示&quot;&gt;&lt;a href=&quot;#效果展示&quot; class=&quot;headerlink&quot; title=&quot;效果展示&quot;&gt;&lt;/a&gt;效果展示&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://img.labmain.com/2017-02-11-1486452112.gif&quot; al
+    
+    </summary>
+    
+      <category term="OC" scheme="http://labmain.com/categories/OC/"/>
+    
+    
+      <category term="iOS" scheme="http://labmain.com/tags/iOS/"/>
+    
+      <category term="UICollectionView" scheme="http://labmain.com/tags/UICollectionView/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LLDB调试技巧（整理）</title>
     <link href="http://labmain.com/2016/11/02/LLDB_debugging_skills/"/>
     <id>http://labmain.com/2016/11/02/LLDB_debugging_skills/</id>
     <published>2016-11-02T13:31:12.000Z</published>
-    <updated>2016-11-02T13:37:30.000Z</updated>
+    <updated>2016-11-02T13:35:22.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="LLDB的基础使用"><a href="#LLDB的基础使用" class="headerlink" title="LLDB的基础使用"></a>LLDB的基础使用</h1><h2 id="help-lt-command-gt"><a href="#help-lt-command-gt" class="headerlink" title="help &lt; command &gt;"></a>help &lt; command &gt;</h2><p>最简单命令是<code>help</code>，它会列举出所有的命令。<br>例如: </p>
 <figure class="highlight objc"><table><tr><td class="code"><pre><div class="line">help print 或者 help thread。</div></pre></td></tr></table></figure>
